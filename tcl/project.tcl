@@ -22,7 +22,7 @@ set_property target_language Verilog [current_project]
 # TODO: source $repo_root/tcl/bd.tcl and generate the BD wrapper.
 
 # --- RTL ---
-add_files -fileset sources_1 [glob $repo_root/rtl/*.sv]
+add_files -fileset sources_1 [glob $repo_root/rtl/top/*.sv]
 set_property top kr260_top [get_filesets sources_1]
 
 # --- Constraints (unmanaged Tcl) ---

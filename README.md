@@ -14,7 +14,7 @@ your `PATH` (e.g. `source <install>/Vivado/2026.1.1/settings64.sh`).
 ## Repository Layout
 
 ```
-rtl/    SystemVerilog sources (kr260_top.sv is the top level)
+rtl/    SystemVerilog sources; top/kr260_top.sv is the top level, IP cores in their own subdirs
 syn/    Constraints, sourced as Tcl: io_ports.tcl, timing.tcl
 tcl/    Project/build scripts and the Vivado-exported bd.tcl
 rdl/    SystemRDL register descriptions (PeakRDL)
