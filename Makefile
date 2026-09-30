@@ -12,7 +12,7 @@ $(GUI_XPR):
 
 # Open the GUI project, creating it first if needed.
 gui: $(GUI_XPR)
-	cd build && $(VIVADO) -mode gui gui/kr260.xpr &
+	cd build && $(VIVADO) -mode gui -source ../tcl/helpers.tcl gui/kr260.xpr &
 
 # Full headless build from a clean project; products land in out/.
 build:

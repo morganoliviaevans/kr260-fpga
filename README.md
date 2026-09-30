@@ -34,8 +34,8 @@ make gui
 ```
 
 Creates the project in `build/gui/` (if it doesn't already exist) and opens it
-in Vivado. After editing the block design, export it back to `tcl/bd.tcl`
-before committing. `make clean` deletes the project so the next `make gui`
+in Vivado. After editing the block design, run `dump_bd` in the Vivado Tcl
+console to validate it and export it back to `tcl/bd.tcl` before committing. `make clean` deletes the project so the next `make gui`
 recreates it from sources.
 
 ### Headless
