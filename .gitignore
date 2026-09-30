@@ -1,0 +1,33 @@
+# --- Vivado build area (projects are disposable, regenerated from tcl/) ---
+build/
+
+# --- Vivado droppings (when launched outside build/) ---
+.Xil/
+*.jou
+*.log
+*.str
+*.backup.*
+vivado_pid*.zip
+webtalk*
+usage_statistics_webtalk.*
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.gen/
+*.srcs/
+*.ip_user_files/
+*.xpr
+NA/
+
+# --- Python / PeakRDL tooling ---
+.venv/
+__pycache__/
+*.pyc
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
