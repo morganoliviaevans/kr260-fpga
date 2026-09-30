@@ -1,3 +1,6 @@
+# --- Local scratch (reference docs, etc.; never committed) ---
+temp/
+
 # --- Vivado build area (projects are disposable, regenerated from tcl/) ---
 build/
 
