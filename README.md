@@ -52,3 +52,30 @@ make build
 Recreates the project from scratch in `build/batch/`, runs through bitstream
 generation, and copies build products and reports into `out/`. Set `JOBS=N` to
 control run parallelism (default 8).
+
+The build refuses to run with uncommitted changes (anything outside `out/`), so
+every checked-in result traces back to a commit. `out/README.md` records that
+commit, the branch, timestamps, Vivado version, and host. To build anyway while
+iterating, use `make build ALLOW_DIRTY=1`; the provenance is then marked dirty
+and lists the uncommitted files.
+
+## Current Build
+
+Bring-up image: the PS plus a few PL signals to prove the board and the build
+flow end to end.
+
+- **Fan** (`FAN_EN_B`): driven by the PS (TTC0), as in the AMD example design.
+- **PMOD LED chasers**: each PMOD header walks a single lit LED across its 8
+  pins (IO1 → IO8, then back to IO1), clocked off `CLK100`. Each header runs at
+  its own speed; a full lap is all 8 LEDs traversed.
+
+  | PMOD  | Step time | Full lap (8 LEDs) |
+  |-------|-----------|-------------------|
+  | PMOD1 | 200 ms    | 1.6 s             |
+  | PMOD2 | 400 ms    | 3.2 s             |
+  | PMOD3 | 800 ms    | 6.4 s             |
+  | PMOD4 | 1.6 s     | 12.8 s            |
+
+  PMOD pins drive 3.3 V (LVCMOS33); use a series resistor (~220–330 Ω) on each
+  LED.
+- **AXI IIC / AXI SPI**: present in the block design but not wired to any pins.
