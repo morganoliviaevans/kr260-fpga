@@ -20,4 +20,4 @@ build:
 	cd build && $(VIVADO) -mode batch -source ../tcl/build.tcl
 
 clean:
-	git clean -fXd
+	git clean -fXd -e '!temp/'
