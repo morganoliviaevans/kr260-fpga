@@ -43,9 +43,11 @@ if {[file exists $impl_dir/$top.ltx]} {
 }
 write_hw_platform -fixed -include_bit -force $out_dir/kr260.xsa
 
-# .bit.bin for loading from Linux on the PS (fpgautil / xmutil).
+# .bin for loading from Linux on the PS (fpgautil / xmutil). bootgen always
+# names its output <input>.bit.bin, so rename it.
 set bif $proj_dir/kr260.bif
 set fh [open $bif w]
 puts $fh "all: { $out_dir/kr260.bit }"
 close $fh
 exec $::env(XILINX_VIVADO)/bin/bootgen -arch zynqmp -image $bif -process_bitstream bin -w
+file rename -force $out_dir/kr260.bit.bin $out_dir/kr260.bin
