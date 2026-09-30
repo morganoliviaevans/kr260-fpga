@@ -3,7 +3,7 @@
 # KR260 carrier card decode: carrier signal name to som240_* connector signal.
 # Requires k26_fpga.xdc and k26_som.xdc to be sourced first. Extracted from
 # AMD XTP743 KR260 carrier card schematic (rev A02): pages 6-7 (SOM240_1/2
-# connectors), 10-11 (PMOD), 12 (Raspberry Pi header J21).
+# connectors), 3 (fan header), 10-11 (PMOD), 12 (Raspberry Pi header J21).
 
 # PMOD1
 set PMOD1_IO1_HDA11                ${som240_1_a17}
@@ -74,3 +74,6 @@ set RPI_GPIO24_HDB20               ${som240_2_a48}
 set RPI_GPIO25_HDB21               ${som240_2_a50}
 set RPI_GPIO26_HDB22               ${som240_2_a51}
 set RPI_GPIO27_HDB23               ${som240_2_a52}
+
+# FAN HEADER (J13)
+set FAN_EN_B_HDA20                 ${som240_1_c24}
