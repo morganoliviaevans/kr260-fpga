@@ -6,25 +6,28 @@ FPGA image for the AMD/Xilinx Kria KR260 Robotics Starter Kit.
 
 Developed on Ubuntu 24.04 (x86_64).
 
-| Tool     | Version  | Notes                            |
-|----------|----------|----------------------------------|
-| Vivado   | 2025.2   |                                  |
-| GNU Make | 4.3      | `sudo apt install make`          |
-| Git      | 2.43     | `make clean` uses `git clean`    |
+| Tool     | Version  | Notes                                              |
+|----------|----------|----------------------------------------------------|
+| Vivado   | 2025.2   | Free tier covers the K26; see note below           |
+| GNU Make | 4.3      | `sudo apt install make`                            |
+| Git      | 2.43     | Clean-tree check in `make build`; `make clean`     |
 
 Other dependencies will be added here as they come up. `vivado` must be on
 your `PATH` (e.g. `source /tools/Xilinx/2025.2/Vivado/settings64.sh`).
+
+Vivado is pinned to 2025.2 on purpose: from 2026.1, AMD's licensing requires a
+paid tier for the K26, and the free tier can't target it.
 
 ## Repository Layout
 
 ```
 rtl/    SystemVerilog sources (kr260_top.sv is the top level)
-syn/    Constraints: pin decode layers (k26_fpga, k26_som, kr260_carrier .xdc),
-        io_ports.tcl, timing.tcl
+syn/    Constraints: pin decode layers (.xdc), io_ports.tcl, timing.tcl
 tcl/    Project/build scripts and the Vivado-exported bd.tcl
-rdl/    SystemRDL register descriptions (PeakRDL)
+rdl/    SystemRDL register descriptions for PeakRDL (placeholder)
 out/    Checked-in build results: bitstream/ (.bit/.bin/.xsa), reports/, logs/
 build/  Vivado working area (generated, git-ignored)
+temp/   Local scratch, e.g. reference PDFs (git-ignored, kept by make clean)
 ```
 
 `tcl/bd.tcl` is always exported from Vivado; make block design changes in the
@@ -40,8 +43,10 @@ make gui
 
 Creates the project in `build/gui/` (if it doesn't already exist) and opens it
 in Vivado. After editing the block design, run `dump_bd` in the Vivado Tcl
-console to validate it and export it back to `tcl/bd.tcl` before committing. `make clean` deletes the project so the next `make gui`
-recreates it from sources.
+console to validate it and export it back to `tcl/bd.tcl` before committing.
+
+`make clean` deletes everything git ignores except `temp/`, including the
+project, so the next `make gui` recreates it from sources.
 
 ### Headless
 
@@ -58,6 +63,41 @@ every checked-in result traces back to a commit. `out/README.md` records that
 commit, the branch, timestamps, Vivado version, and host. To build anyway while
 iterating, use `make build ALLOW_DIRTY=1`; the provenance is then marked dirty
 and lists the uncommitted files.
+
+## Pin Constraints
+
+Pins are resolved through three decode layers in `syn/`, each a list of Tcl
+variables built from the one before it:
+
+| File                 | Maps                                  | Example                                          |
+|----------------------|---------------------------------------|--------------------------------------------------|
+| `k26_fpga.xdc`       | FPGA pin name → package pin           | `IO_L11P_AD9P_45` → `A12`                        |
+| `k26_som.xdc`        | SOM connector signal → FPGA pin name  | `som240_1_c24` → `IO_L11P_AD9P_45`               |
+| `kr260_carrier.xdc`  | Carrier signal → SOM connector signal | `FAN_EN_B_HDA20` → `som240_1_c24`                |
+
+`io_ports.tcl` then constrains top-level ports using carrier names only:
+
+```tcl
+set_property -dict "IOSTANDARD LVCMOS33  PACKAGE_PIN ${PMOD1_IO1_HDA11}" [get_ports {PMOD1[0]}]
+```
+
+The SOM layers come from AMD XTP685 (K26 SOM XDC); the carrier layer from XTP743
+(KR260 carrier schematic). The carrier layer currently covers the fan, PMOD1–4,
+and the Raspberry Pi header; to use another carrier signal, add it there first.
+
+## Loading the Image
+
+Not yet exercised on the board; expect some trial and error.
+
+- **From Linux on the PS:** copy `out/bitstream/kr260.bin` over, then
+  `sudo xmutil unloadapp` (the starter-kit app is loaded at boot) and
+  `sudo fpgautil -b kr260.bin`. The PL clock and reset come from the PS as Linux
+  set them up, so if nothing moves, that's the first suspect.
+- **Over JTAG:** program `out/bitstream/kr260.bit` from the Vivado Hardware
+  Manager.
+
+`kr260.xsa` isn't loaded directly; it's the hardware handoff for device tree
+overlays, Vitis, or PetaLinux.
 
 ## Current Build
 
