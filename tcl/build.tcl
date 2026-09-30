@@ -35,19 +35,21 @@ foreach rpt [glob -nocomplain $synth_dir/*.rpt $impl_dir/*.rpt] {
 file copy $synth_dir/runme.log $out_dir/logs/synth_1.log
 file copy $impl_dir/runme.log  $out_dir/logs/impl_1.log
 
-# --- Build products ---
-file delete -force {*}[glob -nocomplain $out_dir/kr260.*]
-file copy $impl_dir/$top.bit $out_dir/kr260.bit
+# --- Build products (replaced wholesale each build) ---
+set bit_dir $out_dir/bitstream
+file delete -force $bit_dir
+file mkdir $bit_dir
+file copy $impl_dir/$top.bit $bit_dir/kr260.bit
 if {[file exists $impl_dir/$top.ltx]} {
-    file copy $impl_dir/$top.ltx $out_dir/kr260.ltx
+    file copy $impl_dir/$top.ltx $bit_dir/kr260.ltx
 }
-write_hw_platform -fixed -include_bit -force $out_dir/kr260.xsa
+write_hw_platform -fixed -include_bit -force $bit_dir/kr260.xsa
 
 # .bin for loading from Linux on the PS (fpgautil / xmutil). bootgen always
 # names its output <input>.bit.bin, so rename it.
 set bif $proj_dir/kr260.bif
 set fh [open $bif w]
-puts $fh "all: { $out_dir/kr260.bit }"
+puts $fh "all: { $bit_dir/kr260.bit }"
 close $fh
 exec $::env(XILINX_VIVADO)/bin/bootgen -arch zynqmp -image $bif -process_bitstream bin -w
-file rename -force $out_dir/kr260.bit.bin $out_dir/kr260.bin
+file rename -force $bit_dir/kr260.bit.bin $bit_dir/kr260.bin

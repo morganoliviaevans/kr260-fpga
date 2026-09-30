@@ -23,7 +23,7 @@ syn/    Constraints: pin decode layers (k26_fpga, k26_som, kr260_carrier .xdc),
         io_ports.tcl, timing.tcl
 tcl/    Project/build scripts and the Vivado-exported bd.tcl
 rdl/    SystemRDL register descriptions (PeakRDL)
-out/    Checked-in build products (.bit/.bin/.xsa) and reports
+out/    Checked-in build results: bitstream/ (.bit/.bin/.xsa), reports/, logs/
 build/  Vivado working area (generated, git-ignored)
 ```
 
