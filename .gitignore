@@ -8,6 +8,7 @@ build/
 .Xil/
 *.jou
 *.log
+!out/logs/*.log
 *.str
 *.backup.*
 vivado_pid*.zip

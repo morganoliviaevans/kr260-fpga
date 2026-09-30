@@ -18,6 +18,7 @@ gui: $(GUI_XPR)
 build:
 	mkdir -p build
 	cd build && $(VIVADO) -mode batch -source ../tcl/build.tcl
+	cp build/vivado.log out/logs/vivado.log
 
 clean:
 	git clean -fXd -e '!temp/'
