@@ -1,7 +1,7 @@
-# k26_som.tcl
+# k26_som.xdc
 #
 # K26 SOM connector decode: som240_* connector signal to FPGA pin name,
-# grouped by bank. Requires XCK26_2LVSFVC784C.tcl to be sourced first.
+# grouped by bank. Requires k26_fpga.xdc to be sourced first.
 # Extracted from AMD XTP685 Kria_K26_SOM_Rev1.xdc.
 
 # BANK 43

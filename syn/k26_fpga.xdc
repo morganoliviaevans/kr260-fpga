@@ -1,4 +1,4 @@
-# XCK26_2LVSFVC784C.tcl
+# k26_fpga.xdc
 #
 # Device pin decode for the K26 (xck26-sfvc784-2LV-c): FPGA pin name to
 # package pin, grouped by bank. Covers every pin routed to a som240_*
