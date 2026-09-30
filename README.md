@@ -19,7 +19,8 @@ your `PATH` (e.g. `source /tools/Xilinx/2025.2/Vivado/settings64.sh`).
 
 ```
 rtl/    SystemVerilog sources (kr260_top.sv is the top level)
-syn/    Constraints, sourced as Tcl: io_ports.tcl, timing.tcl
+syn/    Constraints: pin decode layers (k26_fpga, k26_som, kr260_carrier .xdc),
+        io_ports.tcl, timing.tcl
 tcl/    Project/build scripts and the Vivado-exported bd.tcl
 rdl/    SystemRDL register descriptions (PeakRDL)
 out/    Checked-in build products (.bit/.bin/.xsa) and reports
