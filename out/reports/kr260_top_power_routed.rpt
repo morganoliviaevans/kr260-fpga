@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Tue Sep 29 23:46:27 2026
+| Date             : Wed Sep 30 00:20:11 2026
 | Host             : morgan-MS-7D25 running 64-bit Ubuntu 24.04.5 LTS
 | Command          : report_power -file kr260_top_power_routed.rpt -pb kr260_top_power_summary_routed.pb -rpx kr260_top_power_routed.rpx
 | Design           : kr260_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.005        |
+| Total On-Chip Power (W)  | 3.010        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.680        |
+| Dynamic (W)              | 2.685        |
 | Device Static (W)        | 0.325        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 78.0         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        3 |       --- |             --- |
-| CLB Logic                |     0.003 |     5141 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1862 |    117120 |            1.59 |
-|   Register               |    <0.001 |     2246 |    234240 |            0.96 |
+| CLB Logic                |     0.003 |     5361 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     1893 |    117120 |            1.62 |
+|   Register               |    <0.001 |     2416 |    234240 |            1.03 |
+|   CARRY8                 |    <0.001 |       37 |     14640 |            0.25 |
 |   LUT as Distributed RAM |    <0.001 |       80 |     57600 |            0.14 |
-|   CARRY8                 |    <0.001 |       21 |     14640 |            0.14 |
 |   LUT as Shift Register  |    <0.001 |       20 |     57600 |            0.03 |
-|   Others                 |     0.000 |      309 |       --- |             --- |
+|   Others                 |     0.000 |      312 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       10 |    117120 |           <0.01 |
-| Signals                  |     0.003 |     3846 |       --- |             --- |
-| I/O                      |    <0.001 |        1 |       189 |            0.53 |
+| Signals                  |     0.003 |     4054 |       --- |             --- |
+| I/O                      |     0.005 |       33 |       189 |           17.46 |
 | PS8                      |     2.668 |        1 |       --- |             --- |
 | Static Power             |     0.325 |          |           |                 |
 |   PS Static              |     0.000 |          |           |                 |
 |   PL Static              |     0.325 |          |           |                 |
-| Total                    |     3.005 |          |           |                 |
+| Total                    |     3.010 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -81,8 +81,8 @@ Table of Contents
 | Vccint_io        |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
-| Vccaux_io        |       1.800 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
-| Vcco33           |       3.300 |     0.007 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
+| Vccaux_io        |       1.800 |     0.032 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
+| Vcco33           |       3.300 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25           |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18           |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15           |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -164,7 +164,7 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| kr260_top             |     2.680 |
+| kr260_top             |     2.685 |
 |   kr260_i             |     2.679 |
 |     I2C               |     0.001 |
 |       axi_iic_0       |     0.001 |
