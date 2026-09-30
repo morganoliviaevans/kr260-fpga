@@ -8,12 +8,12 @@ Developed on Ubuntu 24.04 (x86_64).
 
 | Tool     | Version  | Notes                            |
 |----------|----------|----------------------------------|
-| Vivado   | 2026.1.1 |                                  |
+| Vivado   | 2025.2   |                                  |
 | GNU Make | 4.3      | `sudo apt install make`          |
 | Git      | 2.43     | `make clean` uses `git clean`    |
 
 Other dependencies will be added here as they come up. `vivado` must be on
-your `PATH` (e.g. `source <install>/Vivado/2026.1.1/settings64.sh`).
+your `PATH` (e.g. `source /tools/Xilinx/2025.2/Vivado/settings64.sh`).
 
 ## Repository Layout
 
