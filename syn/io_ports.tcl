@@ -7,17 +7,14 @@
 # --- Fan header enable (active low) ---
 set_property -dict "IOSTANDARD LVCMOS33  SLEW SLOW  DRIVE 4  PACKAGE_PIN ${FAN_EN_B_HDA20}" [get_ports FAN_EN_B]
 
-# --- PMOD header pinout (PMOD1-4 = J2, J18, J19, J20) ---
-#
-# All four headers are identical 2x6 right-angle sockets. Viewed head-on from
-# the board edge, PCB at the bottom.
+# KR260 PMOD Header Physical Orientation Guide
 #
 #     +-----+-----+-----------+-----------+-----------+-----------+
 #     | 3V3 | GND | PMOD*_IO4 | PMOD*_IO3 | PMOD*_IO2 | PMOD*_IO1 |
 #     +-----+-----+-----------+-----------+-----------+-----------+
 #     | 3V3 | GND | PMOD*_IO8 | PMOD*_IO7 | PMOD*_IO6 | PMOD*_IO5 |
 #  ===+-----+-----+-----------+-----------+-----------+-----------+===
-#  ======================== KR260 carrier PCB ========================
+#  ======================== KR260 Carrier PCB ========================
 #
 # Port bits: PMODn[0] = IO1 ... PMODn[7] = IO8.
 set_property -dict "IOSTANDARD LVCMOS33  PACKAGE_PIN ${PMOD1_IO1_HDA11}"    [get_ports {PMOD1[0]}]

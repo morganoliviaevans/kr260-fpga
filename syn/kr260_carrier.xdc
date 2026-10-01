@@ -5,17 +5,14 @@
 # AMD XTP743 KR260 carrier card schematic (rev A02): pages 6-7 (SOM240_1/2
 # connectors), 3 (fan header), 10-11 (PMOD), 12 (Raspberry Pi header J21).
 
-# --- PMOD header pinout (PMOD1-4 = J2, J18, J19, J20) ---
-#
-# All four headers are identical 2x6 right-angle sockets. Viewed head-on from
-# the board edge, PCB at the bottom.
+# KR260 PMOD Header Physical Orientation Guide
 #
 #     +-----+-----+-----------+-----------+-----------+-----------+
 #     | 3V3 | GND | PMOD*_IO4 | PMOD*_IO3 | PMOD*_IO2 | PMOD*_IO1 |
 #     +-----+-----+-----------+-----------+-----------+-----------+
 #     | 3V3 | GND | PMOD*_IO8 | PMOD*_IO7 | PMOD*_IO6 | PMOD*_IO5 |
 #  ===+-----+-----+-----------+-----------+-----------+-----------+===
-#  ======================== KR260 carrier PCB ========================
+#  ======================== KR260 Carrier PCB ========================
 
 # PMOD1
 set PMOD1_IO1_HDA11                ${som240_1_a17}
