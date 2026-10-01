@@ -45,8 +45,8 @@ if {[file exists $impl_dir/$top.ltx]} {
 }
 write_hw_platform -fixed -include_bit -force $bit_dir/kr260.xsa
 
-# .bin for loading from Linux on the PS (fpgautil / xmutil). bootgen always
-# names its output <input>.bit.bin, so rename it.
+# .bin: the bitstream processed by bootgen for the Zynq UltraScale+. bootgen
+# always names its output <input>.bit.bin, so rename it.
 set bif $proj_dir/kr260.bif
 set fh [open $bif w]
 puts $fh "all: { $bit_dir/kr260.bit }"

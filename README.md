@@ -85,20 +85,6 @@ The SOM layers come from AMD XTP685 (K26 SOM XDC); the carrier layer from XTP743
 (KR260 carrier schematic). The carrier layer currently covers the fan, PMOD1–4,
 and the Raspberry Pi header; to use another carrier signal, add it there first.
 
-## Loading the Image
-
-Not yet exercised on the board; expect some trial and error.
-
-- **From Linux on the PS:** copy `out/bitstream/kr260.bin` over, then
-  `sudo xmutil unloadapp` (the starter-kit app is loaded at boot) and
-  `sudo fpgautil -b kr260.bin`. The PL clock and reset come from the PS as Linux
-  set them up, so if nothing moves, that's the first suspect.
-- **Over JTAG:** program `out/bitstream/kr260.bit` from the Vivado Hardware
-  Manager.
-
-`kr260.xsa` isn't loaded directly; it's the hardware handoff for device tree
-overlays, Vitis, or PetaLinux.
-
 ## Current Build
 
 Bring-up image: the PS plus a few PL signals to prove the board and the build
