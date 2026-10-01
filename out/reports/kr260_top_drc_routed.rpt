@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Wed Sep 30 00:20:09 2026
+| Date         : Wed Sep 30 21:01:31 2026
 | Host         : morgan-MS-7D25 running 64-bit Ubuntu 24.04.5 LTS
 | Command      : report_drc -file kr260_top_drc_routed.rpt -pb kr260_top_drc_routed.pb -rpx kr260_top_drc_routed.rpx
 | Design       : kr260_top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 7
+             Checks found: 3
 +-----------+----------+------------------------------------------------+--------+
 | Rule      | Severity | Description                                    | Checks |
 +-----------+----------+------------------------------------------------+--------+
-| PLIO-6    | Warning  | Placement Constraints Check for IO constraints | 3      |
-| REQP-1617 | Warning  | use_IOB_register                               | 3      |
+| PLIO-6    | Warning  | Placement Constraints Check for IO constraints | 1      |
+| REQP-1617 | Warning  | use_IOB_register                               | 1      |
 | RTSTAT-10 | Warning  | No routable loads                              | 1      |
 +-----------+----------+------------------------------------------------+--------+
 
@@ -40,37 +40,16 @@ Placement Constraints Check for IO constraints
 Invalid constraint on register kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
 Related violations: <none>
 
-PLIO-6#2 Warning
-Placement Constraints Check for IO constraints  
-Invalid constraint on register kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
-Related violations: <none>
-
-PLIO-6#3 Warning
-Placement Constraints Check for IO constraints  
-Invalid constraint on register kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
-Related violations: <none>
-
 REQP-1617#1 Warning
 use_IOB_register  
 The FDRE cell kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
 Related violations: <none>
 
-REQP-1617#2 Warning
-use_IOB_register  
-The FDRE cell kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
-Related violations: <none>
-
-REQP-1617#3 Warning
-use_IOB_register  
-The FDRE cell kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
-Related violations: <none>
-
 RTSTAT-10#1 Warning
 No routable loads  
-75 net(s) have no routable loads. The problem bus(es) and/or net(s) are kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
+70 net(s) have no routable loads. The problem bus(es) and/or net(s) are kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
 kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
 kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/INTERRUPT_CONTROL_I/ip2intc_irpt,
-kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/io0_t,
 kr260_i/SPI/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/io1_t,
 kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[0],
 kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[12],
@@ -81,8 +60,9 @@ kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_norm
 kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[17],
 kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[18],
 kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[19],
+kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[20],
 kr260_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[9]
- (the first 15 of 59 listed nets/buses).
+ (the first 15 of 54 listed nets/buses).
 Related violations: <none>
 
 
