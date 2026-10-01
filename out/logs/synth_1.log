@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed Sep 30 00:18:54 2026
+  **** Start of session at: Wed Sep 30 21:00:18 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -22,59 +22,59 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 319031
+INFO: [Synth 8-7075] Helper process launched with PID 66085
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2775.688 ; gain = 144.656 ; free physical = 15059 ; free virtual = 21302
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2772.785 ; gain = 149.688 ; free physical = 16200 ; free virtual = 25313
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'kr260_top' [/home/eric/Documents/kr260-fpga/rtl/kr260_top.sv:6]
 INFO: [Synth 8-6157] synthesizing module 'kr260' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:275]
 INFO: [Synth 8-6157] synthesizing module 'I2C_imp_17DWMHB' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:13]
-INFO: [Synth 8-6157] synthesizing module 'kr260_axi_iic_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'kr260_axi_iic_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'kr260_axi_iic_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'kr260_axi_iic_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_axi_iic_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'kr260_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:91]
 WARNING: [Synth 8-7071] port 'gpo' of module 'kr260_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:91]
 WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'kr260_axi_iic_0_0' has 27 connections declared, but only 25 given [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:91]
 INFO: [Synth 8-6155] done synthesizing module 'I2C_imp_17DWMHB' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:13]
 INFO: [Synth 8-6157] synthesizing module 'RESET_SYNC_imp_DMTIV9' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:119]
-INFO: [Synth 8-6157] synthesizing module 'kr260_proc_sys_reset_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'kr260_proc_sys_reset_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'kr260_proc_sys_reset_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'kr260_proc_sys_reset_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_proc_sys_reset_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'kr260_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:134]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'kr260_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:134]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'kr260_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:134]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'kr260_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:134]
 INFO: [Synth 8-6155] done synthesizing module 'RESET_SYNC_imp_DMTIV9' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:119]
 INFO: [Synth 8-6157] synthesizing module 'SPI_imp_1KRHY12' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:144]
-INFO: [Synth 8-6157] synthesizing module 'kr260_axi_quad_spi_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'kr260_axi_quad_spi_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'kr260_axi_quad_spi_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'kr260_axi_quad_spi_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_axi_quad_spi_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'kr260_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:240]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'kr260_axi_quad_spi_0_0' has 33 connections declared, but only 32 given [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:240]
 INFO: [Synth 8-6155] done synthesizing module 'SPI_imp_1KRHY12' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:144]
-INFO: [Synth 8-6157] synthesizing module 'kr260_axi_smc_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'kr260_axi_smc_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'kr260_axi_smc_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'kr260_axi_smc_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_axi_smc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'kr260_axi_smc_0' is unconnected for instance 'axi_smc' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:490]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'kr260_axi_smc_0' is unconnected for instance 'axi_smc' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:490]
 WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'kr260_axi_smc_0' is unconnected for instance 'axi_smc' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:490]
 WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'kr260_axi_smc_0' is unconnected for instance 'axi_smc' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:490]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'kr260_axi_smc_0' has 79 connections declared, but only 75 given [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:490]
-INFO: [Synth 8-6157] synthesizing module 'kr260_zynq_ultra_ps_e_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'kr260_zynq_ultra_ps_e_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-318969-morgan-MS-7D25/realtime/kr260_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'kr260_zynq_ultra_ps_e_0_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'kr260_zynq_ultra_ps_e_0_0' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/.Xil/Vivado-66033-morgan-MS-7D25/realtime/kr260_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'emio_enet0_enet_tsu_timer_cnt' of module 'kr260_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:567]
 WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'kr260_zynq_ultra_ps_e_0_0' has 48 connections declared, but only 47 given [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:567]
 INFO: [Synth 8-6155] done synthesizing module 'kr260' (0#1) [/home/eric/Documents/kr260-fpga/build/batch/kr260.gen/sources_1/bd/kr260/synth/kr260.v:275]
 INFO: [Synth 8-6155] done synthesizing module 'kr260_top' (0#1) [/home/eric/Documents/kr260-fpga/rtl/kr260_top.sv:6]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2865.656 ; gain = 234.625 ; free physical = 14946 ; free virtual = 21191
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2865.754 ; gain = 242.656 ; free physical = 16094 ; free virtual = 25209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2865.656 ; gain = 234.625 ; free physical = 14946 ; free virtual = 21191
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2865.754 ; gain = 242.656 ; free physical = 16094 ; free virtual = 25209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2865.656 ; gain = 234.625 ; free physical = 14946 ; free virtual = 21191
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2865.754 ; gain = 242.656 ; free physical = 16094 ; free virtual = 25209
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2865.656 ; gain = 0.000 ; free physical = 14946 ; free virtual = 21191
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2865.754 ; gain = 0.000 ; free physical = 16094 ; free virtual = 25209
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -105,14 +105,14 @@ Parsing XDC File [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1
 Finished Parsing XDC File [/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2948.324 ; gain = 0.000 ; free physical = 14951 ; free virtual = 21190
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2930.586 ; gain = 0.000 ; free physical = 16021 ; free virtual = 25137
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2948.359 ; gain = 0.000 ; free physical = 14951 ; free virtual = 21190
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2930.621 ; gain = 0.000 ; free physical = 16021 ; free virtual = 25136
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'kr260_i/SPI/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2948.359 ; gain = 317.328 ; free physical = 14977 ; free virtual = 21221
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2930.621 ; gain = 307.523 ; free physical = 16051 ; free virtual = 25166
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -120,32 +120,23 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2956.328 ; gain = 325.297 ; free physical = 14977 ; free virtual = 21221
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2938.590 ; gain = 315.492 ; free physical = 16051 ; free virtual = 25166
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2956.328 ; gain = 325.297 ; free physical = 14985 ; free virtual = 21229
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2938.590 ; gain = 315.492 ; free physical = 16051 ; free virtual = 25166
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2956.328 ; gain = 325.297 ; free physical = 14985 ; free virtual = 21230
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2938.590 ; gain = 315.492 ; free physical = 16058 ; free virtual = 25174
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   28 Bit       Adders := 1     
-	   2 Input   27 Bit       Adders := 1     
-	   2 Input   26 Bit       Adders := 1     
-	   2 Input   25 Bit       Adders := 1     
 +---Registers : 
-	               28 Bit    Registers := 1     
-	               27 Bit    Registers := 1     
-	               26 Bit    Registers := 1     
-	               25 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -162,25 +153,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2956.328 ; gain = 325.297 ; free physical = 14972 ; free virtual = 21221
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2938.590 ; gain = 315.492 ; free physical = 16059 ; free virtual = 25180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3595.852 ; gain = 964.820 ; free physical = 14421 ; free virtual = 20672
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3588.145 ; gain = 965.047 ; free physical = 15531 ; free virtual = 24652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3616.883 ; gain = 985.852 ; free physical = 14405 ; free virtual = 20656
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3608.176 ; gain = 985.078 ; free physical = 15515 ; free virtual = 24636
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3616.883 ; gain = 985.852 ; free physical = 14405 ; free virtual = 20656
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3608.176 ; gain = 985.078 ; free physical = 15515 ; free virtual = 24636
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -198,37 +189,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14267 ; free virtual = 20512
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14267 ; free virtual = 20512
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14267 ; free virtual = 20513
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14269 ; free virtual = 20515
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14270 ; free virtual = 20516
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14270 ; free virtual = 20516
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -254,41 +245,43 @@ Report Cell Usage:
 |3     |kr260_axi_smc           |     1|
 |4     |kr260_proc_sys_reset_0  |     1|
 |5     |kr260_zynq_ultra_ps_e_0 |     1|
-|6     |CARRY8                  |    16|
-|7     |LUT1                    |     5|
-|8     |LUT2                    |     1|
-|9     |LUT3                    |     1|
-|10    |LUT4                    |     1|
-|11    |LUT5                    |     3|
-|12    |LUT6                    |    21|
-|13    |FDRE                    |   134|
-|14    |FDSE                    |     4|
-|15    |OBUF                    |    33|
+|6     |CARRY8                  |     4|
+|7     |LUT1                    |     2|
+|8     |LUT5                    |     1|
+|9     |LUT6                    |     5|
+|10    |FDRE                    |    32|
+|11    |FDSE                    |     1|
+|12    |IBUF                    |     1|
+|13    |IOBUF                   |     2|
+|14    |OBUF                    |     9|
+|15    |OBUFT                   |    11|
 +------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14270 ; free virtual = 20516
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3795.695 ; gain = 1081.961 ; free physical = 14263 ; free virtual = 20510
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3795.695 ; gain = 1164.664 ; free physical = 14263 ; free virtual = 20510
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3783.988 ; gain = 1096.023 ; free physical = 15350 ; free virtual = 24471
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3783.988 ; gain = 1160.891 ; free physical = 15350 ; free virtual = 24471
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3795.695 ; gain = 0.000 ; free physical = 14430 ; free virtual = 20677
-INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3783.988 ; gain = 0.000 ; free physical = 15509 ; free virtual = 24630
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3795.695 ; gain = 0.000 ; free physical = 14430 ; free virtual = 20677
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3783.988 ; gain = 0.000 ; free physical = 15498 ; free virtual = 24620
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
 
-Synth Design complete | Checksum: 35484b53
+Synth Design complete | Checksum: 87f3749
 INFO: [Common 17-83] Releasing license: Synthesis
 39 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 3795.695 ; gain = 2171.211 ; free physical = 14430 ; free virtual = 20676
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2857.366; main = 2857.366; forked = 281.819
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3950.539; main = 3722.012; forked = 994.207
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3795.695 ; gain = 0.000 ; free physical = 14434 ; free virtual = 20679
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 3783.988 ; gain = 2157.414 ; free physical = 15498 ; free virtual = 24620
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2855.772; main = 2855.772; forked = 281.938
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3932.801; main = 3710.305; forked = 994.207
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3783.988 ; gain = 0.000 ; free physical = 15498 ; free virtual = 24619
 INFO: [Common 17-1381] The checkpoint '/home/eric/Documents/kr260-fpga/build/batch/kr260.runs/synth_1/kr260_top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file kr260_top_utilization_synth.rpt -pb kr260_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 00:19:19 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 21:00:42 2026...

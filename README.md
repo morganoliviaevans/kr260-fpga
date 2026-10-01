@@ -87,21 +87,72 @@ and the Raspberry Pi header; to use another carrier signal, add it there first.
 
 ## Current Build
 
-Bring-up image: the PS plus a few PL signals to prove the board and the build
-flow end to end.
+The PS plus PL logic on all four PMOD headers. Headers are shown head-on from
+the board edge (same orientation as the guide in `syn/io_ports.tcl`); `-` means
+unused. All PMOD pins are 3.3 V (LVCMOS33).
 
-- **Fan** (`FAN_EN_B`): driven by the PS (TTC0), as in the AMD example design.
-- **PMOD LED chasers**: each PMOD header walks a single lit LED across its 8
-  pins (IO1 → IO8, then back to IO1), clocked off `CLK100`. Each header runs at
-  its own speed; a full lap is all 8 LEDs traversed.
+**PMOD1 (J2): `LED_DANCE`**
 
-  | PMOD  | Step time | Full lap (8 LEDs) |
-  |-------|-----------|-------------------|
-  | PMOD1 | 200 ms    | 1.6 s             |
-  | PMOD2 | 400 ms    | 3.2 s             |
-  | PMOD3 | 800 ms    | 6.4 s             |
-  | PMOD4 | 1.6 s     | 12.8 s            |
+```
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND | LED_DANCE[3] | LED_DANCE[2] | LED_DANCE[1] | LED_DANCE[0] |
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND | LED_DANCE[7] | LED_DANCE[6] | LED_DANCE[5] | LED_DANCE[4] |
+===+-----+-----+--------------+--------------+--------------+--------------+===
+============================== KR260 Carrier PCB ==============================
+```
 
-  PMOD pins drive 3.3 V (LVCMOS33); use a series resistor (~220–330 Ω) on each
-  LED.
-- **AXI IIC / AXI SPI**: present in the block design but not wired to any pins.
+A single lit LED walks `LED_DANCE[0]` → `[7]` and wraps, one step every
+200 ms (a full lap of 8 LEDs in 1.6 s), clocked off `CLK100`. Use a series
+resistor (~220–330 Ω) on each LED.
+
+**PMOD2 (J18): `GPIO_EMIO`**
+
+```
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND | GPIO_EMIO[3] | GPIO_EMIO[2] | GPIO_EMIO[1] | GPIO_EMIO[0] |
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND | GPIO_EMIO[7] | GPIO_EMIO[6] | GPIO_EMIO[5] | GPIO_EMIO[4] |
+===+-----+-----+--------------+--------------+--------------+--------------+===
+============================== KR260 Carrier PCB ==============================
+```
+
+EMIO GPIO bits 0–7 from the PS, as outputs only. Each pin is driven only while
+the PS enables it as an output, and is high-Z otherwise; nothing is read back
+(`gpio_emio_i` is tied to 0). In Linux, EMIO bit *n* is line 78 + *n* on the PS
+GPIO controller (lines 0–77 are the MIO pins).
+
+**PMOD3 (J19): I2C**
+
+```
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND |   I2C_SDA    |   I2C_SCL    |      -       |      -       |
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND |      -       |      -       |      -       |      -       |
+===+-----+-----+--------------+--------------+--------------+--------------+===
+============================== KR260 Carrier PCB ==============================
+```
+
+Driven by the Xilinx AXI IIC core (v2.1,
+[PG090](https://docs.amd.com/r/en-US/pg090-axi-iic)) at AXI base address
+`0xA000_0000` (64 KB). The lines are open drain; the FPGA's internal pull-ups
+are enabled as a fallback, but they're weak: fit external pull-ups
+(~2.2–4.7 kΩ to 3.3 V).
+
+**PMOD4 (J20): SPI**
+
+```
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND |   SPI_SCK    |   SPI_MISO   |   SPI_MOSI   |   SPI_CS_N   |
+   +-----+-----+--------------+--------------+--------------+--------------+
+   | 3V3 | GND |      -       |      -       |      -       |      -       |
+===+-----+-----+--------------+--------------+--------------+--------------+===
+============================== KR260 Carrier PCB ==============================
+```
+
+Driven by the Xilinx AXI Quad SPI core (v3.2, standard SPI mode, master,
+[PG153](https://docs.amd.com/r/en-US/pg153-axi-quad-spi)) at AXI base address
+`0xA001_0000` (64 KB). `SPI_CS_N`, `SPI_MOSI`, and `SPI_SCK` are driven only
+while the core enables them, and are high-Z otherwise.
+
+**Fan** (`FAN_EN_B`): driven by the PS (TTC0), as in the AMD example design.
